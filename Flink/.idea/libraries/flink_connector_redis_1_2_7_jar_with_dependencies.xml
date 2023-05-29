@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="flink-connector-redis-1.2.7-jar-with-dependencies">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../flink-connector-redis-main/target/flink-connector-redis-1.2.7-jar-with-dependencies.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

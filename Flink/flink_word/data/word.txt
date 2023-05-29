@@ -1,0 +1,7 @@
+hello java
+hello world
+hello python
+python
+java
+win jvm
+start hadoop
