@@ -1,0 +1,22 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /opt/module/danmaku/bilibili-api-main/json/DANMU_MSG.json
+    fields:
+      log_topic: DANMU_MSG
+    fields_under_root: true
+    idle_timeout: "0.1s"
+    backoff: "0.1s"
+    scan_frequency: "0.1s"
+
+    
+output.kafka:
+  hosts:
+    - 'hadoop102:9092'
+    - 'hadoop103:9092'
+    - 'hadoop104:9092'
+  topic: 'DANMU_MSG'
+  codec.format:
+    string: '%{[message]}'
+

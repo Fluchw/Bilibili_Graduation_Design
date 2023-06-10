@@ -1,0 +1,5 @@
+依赖于https://github.com/Nemo2011/bilibili-api
+且使用的是python3.9
+
+爬取后的弹幕保存在
+/opt/module/danmaku/bilibili-api-main/json/DANMU_MSG.json

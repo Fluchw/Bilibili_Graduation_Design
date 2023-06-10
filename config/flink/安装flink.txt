@@ -1,0 +1,52 @@
+cd /opt/software
+tar -zxvf flink-1.13.0-bin-scala_2.12.tgz -C /opt/module/
+cd /opt/module/flink-1.13.0/conf/
+vim flink-conf.yaml
+
+====================================================
+# JobManager节点地址.
+jobmanager.rpc.address: hadoop102
+====================================================
+
+vim masters
+hadoop102:8081
+
+vim workers
+
+====================================================
+hadoop103
+hadoop104
+====================================================
+
+cd /opt/module/
+xsync flink-1.13.0/
+
+cd ~/bin
+vim flink.sh 
+
+=======================================================
+#!/bin/bash
+# 启动 Flink 集群
+function start_flink() {
+    /opt/module/flink-1.13.0/bin/start-cluster.sh
+}
+
+# 停止 Flink 集群
+function stop_flink() {
+    /opt/module/flink-1.13.0/bin/stop-cluster.sh
+}
+
+# 检查脚本参数
+if [ "$1" == "start" ]; then
+    start_flink
+elif [ "$1" == "stop" ]; then
+    stop_flink
+else
+    echo "Usage: $0 start|stop"
+    exit 1
+fi
+=======================================================
+chmod 777 flink.sh
+
+flink.sh start
+启动后可在hadoop102:8081查看webUI

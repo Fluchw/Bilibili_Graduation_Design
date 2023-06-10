@@ -1,0 +1,48 @@
+时间戳使用timestamp,在Kibana高级设置中将时区设置为PRC
+time_format和datatime_format已启用,将在后续版本删除
+
+
+使用的是集群模式部署
+
+集群模式需要修改的配置
+sudo vim /etc/security/limits.conf 
+#在文件最后添加如下内容: 
+* soft nofile 65536 
+* hard nofile 131072 
+* soft nproc 2048 
+* hard nproc 65536 
+
+#分发文件 
+scp -r /etc/security/limits.conf root@hadoop103:/etc/security/ 
+scp -r /etc/security/limits.conf root@hadoop104:/etc/security/
+
+sudo vim /etc/sysctl.conf 
+#在文件最后添加如下内容 
+vm.max_map_count=262144
+
+scp -r /etc/sysctl.conf root@hadoop103:/etc/ 
+scp -r /etc/sysctl.conf root@hadoop104:/etc/
+
+（CentOS7.x 不用改）
+sudo vim /etc/security/limits.d/20-nproc.conf
+#修改如下内容 * soft nproc 4096
+
+重启,使配置生效
+
+
+然后下载压缩包解压到三台主机上,
+修改 hadoop103 和 hadoop104 上的节点名 
+#在 hadoop103 进行修改
+vim /opt/module/elasticsearch-7.8.0/config/elasticsearch.yml 
+node.name: node-2 
+#在 hadoop104 进行修改
+vim /opt/module/elasticsearch-7.8.0/config/elasticsearch.yml 
+node.name: node-3
+
+配置好Kibana后使用启动脚本
+es.sh start
+启动后可以在浏览器中输入
+
+hadoop102:5601
+
+查看kibana面板,启动可能需要几分钟

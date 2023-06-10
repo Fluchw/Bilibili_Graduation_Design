@@ -1,0 +1,184 @@
+PUT /danmu_msg
+{
+      "settings": {
+    "analysis": {
+      "filter": {
+        "jieba_stop": {
+          "type":        "stop",
+          "stopwords_path": "stopwords/StopWords.txt"
+        },
+        "jieba_synonym": {
+          "type":        "synonym",
+          "synonyms_path": "synonyms/synonyms.txt"
+        }
+      },
+      "analyzer": {
+        "my_ana": {
+          "tokenizer": "jieba_index",
+          "filter": [
+            "lowercase",
+            "jieba_stop",
+            "jieba_synonym"
+          ]
+        }
+      }
+    }
+  },
+    "mappings": {
+    "properties": {
+      "color": {
+        "type": "keyword"
+      },
+      "content": {
+        "type": "text",
+        "analyzer":"my_ana",
+        "fielddata": true
+      },
+      "datatime_format": {
+        "type": "date",
+        "format" : "yyyy-MM-dd HH:mm:ss",
+        "locale":"zh_CN"
+      },
+      "dm_type": {
+        "type": "long"
+      },
+      "font_size": {
+        "type": "long"
+      },
+      "id_str": {
+        "type": "text"
+      },
+      "recommend_score": {
+        "type": "long"
+      },
+      "sentences": {
+        "type": "long"
+      },
+      "time_format": {
+        "type": "text"
+      },
+      "timestamp": {
+        "type": "date"
+      },
+      "type": {
+        "type": "text"
+      },
+      "uid": {
+        "type": "long"
+      },
+      "words": {
+        "type": "long"
+      },
+      "乐": {
+        "type": "long"
+      },
+      "哀": {
+        "type": "long"
+      },
+      "好": {
+        "type": "long"
+      },
+      "怒": {
+        "type": "long"
+      },
+      "恶": {
+        "type": "long"
+      },
+      "惊": {
+        "type": "long"
+      },
+      "惧": {
+        "type": "long"
+      }
+    }
+  }
+}
+
+
+PUT /msg_test
+{
+      "settings": {
+    "analysis": {
+      "filter": {
+        "jieba_stop": {
+          "type":        "stop",
+          "stopwords_path": "stopwords/StopWords.txt"
+        },
+        "jieba_synonym": {
+          "type":        "synonym",
+          "synonyms_path": "synonyms/synonyms.txt"
+        }
+      },
+      "analyzer": {
+        "my_ana": {
+          "tokenizer": "jieba_index",
+          "filter": [
+            "lowercase",
+            "jieba_stop",
+            "jieba_synonym"
+          ]
+        }
+      }
+    }
+  },
+    "mappings": {
+    "properties": {
+      "color": {
+        "type": "keyword"
+      },
+      "content": {
+        "type": "text",
+        "analyzer":"my_ana",
+        "fielddata": true
+      },
+      "dm_type": {
+        "type": "long"
+      },
+      "font_size": {
+        "type": "long"
+      },
+      "id_str": {
+        "type": "text"
+      },
+      "recommend_score": {
+        "type": "long"
+      },
+      "sentences": {
+        "type": "long"
+      },
+      "timestamp": {
+        "type": "date"
+      },
+      "type": {
+        "type": "text"
+      },
+      "uid": {
+        "type": "long"
+      },
+      "words": {
+        "type": "long"
+      },
+      "乐": {
+        "type": "long"
+      },
+      "哀": {
+        "type": "long"
+      },
+      "好": {
+        "type": "long"
+      },
+      "怒": {
+        "type": "long"
+      },
+      "恶": {
+        "type": "long"
+      },
+      "惊": {
+        "type": "long"
+      },
+      "惧": {
+        "type": "long"
+      }
+    }
+  }
+}
