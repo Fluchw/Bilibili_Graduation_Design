@@ -5,6 +5,19 @@
 下载链接：https://pan.baidu.com/s/12MGEFSryxPhUtpMbb5RTOQ?pwd=bpdl 
 提取码：bpdl
 
+# 若是选择自己下载,应该使用的版本:
+
+apache-zookeeper-3.5.7-bin.tar.gz
+kibana-7.8.0-linux-x86_64.tar.gz
+elasticsearch-7.8.0-linux-x86_64.tar.gz
+elasticsearch-jieba-plugin-7.4.2.tar.gz  (需要自己编译为适配7.8.0)
+filebeat-7.10.2-linux-x86_64.tar.gz
+flink-1.13.0-bin-scala_2.12.tgz
+jdk-8u212-linux-x64.tar.gz
+kafka_2.11-2.4.1.tgz
+Python-3.9.7.tgz
+redis-6.0.6.tar.gz
+
 # 端口映射
 
 hosts:
