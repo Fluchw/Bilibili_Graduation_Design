@@ -2,8 +2,8 @@
 
 建议直接使用我提供的Elasticsearch，因为它已经配置好了jieba分词器。其他工具也建议直接使用我的版本，因为使用其他版本可能会出现奇奇怪怪的问题。
 
-下载链接：[https://pan.baidu.com/s/12MGEFSryxPhUtpMbb5RTOQ?pwd=bpdl](https://pan.baidu.com/s/12MGEFSryxPhUtpMbb5RTOQ?pwd=bpdl) 
-提取码：bpdl
+下载链接：https://pan.baidu.com/s/1XMqq1DviB1WldifhzihA1w?pwd=ec7h 
+提取码：ec7h
 
 ## 若是选择自己下载,应该使用的版本:
 
