@@ -1,3 +1,7 @@
+# 流程图
+![业务流程 drawio](https://github.com/Fluchw/Bilibili_Graduation_Design/assets/68312531/ed0f0ad2-d186-49ce-8974-06d9d442d9a6)![R()Y_G {38E_J5GBPT0)HNM](https://github.com/Fluchw/Bilibili_Graduation_Design/assets/68312531/fd0b0934-2a73-4339-839f-184c1fc1a36a)
+
+
 # 工具使用说明
 
 建议直接使用我提供的Elasticsearch，因为它已经配置好了jieba分词器。其他工具也建议直接使用我的版本，因为使用其他版本可能会出现奇奇怪怪的问题。
