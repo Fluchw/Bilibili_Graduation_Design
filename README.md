@@ -1,3 +1,5 @@
+项目演示:【[已开源]直播弹幕数据实时可视化 FileBeat+Kafka+Flink+Redis+Elasticsearch+Kibana】 https://www.bilibili.com/video/BV1sP411Q7qX/?share_source=copy_web&vd_source=35617d2b0424c4917984cf1820f58565
+
 # 流程图
 ![业务流程 drawio](https://github.com/Fluchw/Bilibili_Graduation_Design/assets/68312531/ed0f0ad2-d186-49ce-8974-06d9d442d9a6)![R()Y_G {38E_J5GBPT0)HNM](https://github.com/Fluchw/Bilibili_Graduation_Design/assets/68312531/fd0b0934-2a73-4339-839f-184c1fc1a36a)
 
